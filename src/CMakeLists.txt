@@ -1,5 +1,7 @@
 cmake_minimum_required(VERSION 3.24)
-project(Json)
+project(Json VERSION 0.1.1)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
+configure_file(config.h.in config.h)
 add_executable(Json main.cpp)
+target_include_directories(Json PUBLIC "${PROJECT_BINARY_DIR}")

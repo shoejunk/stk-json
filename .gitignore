@@ -23,5 +23,6 @@ bld/
 [Oo]bj/
 [Ll]og/
 [Ll]ogs/
+build/config.h
 # Add this line
 out/

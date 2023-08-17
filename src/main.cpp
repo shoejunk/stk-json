@@ -1,3 +1,6 @@
+// Json Libraries:
+#include "config.h"
+
 // System Libraries:
 #include <iostream>
 #include <concepts>
@@ -19,7 +22,7 @@ int main()
 {
 	if (IsIntegral<int>())
 	{
-		std::cout << "Hello, World!\n";
+		std::cout << "stk-json version " << Json_VERSION_MAJOR << "." << Json_VERSION_MINOR << "." << Json_VERSION_PATCH << std::endl;
 	}
 	else
 	{
