@@ -3,7 +3,6 @@
 
 // System Libraries:
 #include <iostream>
-#include <concepts>
 
 template<class T>
 requires std::integral<T>

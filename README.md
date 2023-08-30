@@ -4,4 +4,4 @@ How to generate project files:
 
 How to build the project:
 - Run "cmake --build" from the directory.
-The executable will be locted in "build\Deubg\Json.exe"
+The executable will be located in "build\Deubg\Json.exe"
