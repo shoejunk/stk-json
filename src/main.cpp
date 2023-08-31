@@ -1,31 +1,29 @@
 // Json Libraries:
 #include "config.h"
 
+// STK Libraries:
+#include <log/logger.h>
+
+// 3rd Party Libraries:
+#include <nlohmann/json.hpp>
+
 // System Libraries:
 #include <iostream>
 
-template<class T>
-requires std::integral<T>
-bool IsIntegral()
-{
-	return true;
-}
-
-template<class T>
-bool IsIntegral()
-{
-	return false;
-}
-
 int main()
 {
-	if (IsIntegral<int>())
-	{
-		std::cout << "stk-json version " << Json_VERSION_MAJOR << "." << Json_VERSION_MINOR << "." << Json_VERSION_PATCH << std::endl;
-	}
-	else
-	{
-		std::cout << "Not an integral type!\n";
-	}
+	nlohmann::json json =
+	{ 
+		{"pi", 3.141},
+		{"happy", true},
+		{"name", "Niels"},
+		{"nothing", nullptr},
+		{"answer", {{"everything", 42}}},
+		{"list", {1, 0, 2}},
+		{"object", {{"currency", "USD"}, {"value", 42.99}}}
+	};
+	std::cout << "declared JSON object: " << std::setw(2) << json << std::endl;
+	NStk::CLogger oLogger;
+	oLogger.Log("borp stormp mcgormp");
 	return 0;
 }
