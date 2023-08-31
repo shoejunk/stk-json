@@ -2,7 +2,7 @@
 cmake_minimum_required(VERSION 3.24)
 
 # Project Name
-project(Json VERSION 0.1.1)
+project(Json VERSION 0.2.0)
 
 # Set C++ Standard
 set(CMAKE_CXX_STANDARD 20)
